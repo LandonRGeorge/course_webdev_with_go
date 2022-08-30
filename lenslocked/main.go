@@ -21,7 +21,7 @@ func errorHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := chi.NewRouter()
 	r.Get("/", homeHandler)
-	r.Get("/contact", aboutHandler)
+	r.Get("/about", aboutHandler)
 	r.NotFound(errorHandler)
 	fmt.Println("Starting the server on :3000...")
 	http.ListenAndServe(":3000", r)
